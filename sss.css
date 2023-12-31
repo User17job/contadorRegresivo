@@ -1,0 +1,289 @@
+body{
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    margin: 0px;
+    border: 0px;
+
+}
+/* estilos para los menus de los colores*/ 
+#containerColors{
+    width: 115px;
+    background-color: rgba(59, 58, 58, 0);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    height:40px;
+    align-items: center;
+    top: 0px;
+}
+.minu{
+    background-color: transparent;
+    font-weight: 600;
+    border: 3px solid  white;
+    width: 75px;
+    margin: 5px;
+    height: 10px;
+    position: absolute;
+    text-align: center;
+    padding: 10px;
+    padding-top: 5px;
+    border-radius: 3px;
+    color: white;
+}
+.menu{
+    width: 0;
+}
+#containerColors .menu {
+display: none;
+}
+#containerColors:hover .menu{
+    display: block;
+}
+ul {
+    width: 100px;
+    height: 134px;
+    padding: 5px;
+    list-style: none;
+    border-radius: 2px;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    background-color: rgba(60, 16, 16, 0.305);
+}
+li{
+    padding: 5px;
+    border-radius: 3px;
+    height: 20px;
+    margin: 3px;
+    text-align: center;
+    background-color: rgb(29, 29, 29);
+}
+li:hover{
+background-color: rgba(24, 24, 24, 0);
+}
+a{text-decoration: none;}
+
+/*segundo menu de colores del bordes */
+#containerColors2{
+    width: 115px;
+    background-color: rgba(167, 64, 64, 0);
+    margin: 10px;
+    padding: 5px;
+    border-radius: 5px;
+    position: absolute;
+    height:40px;
+    align-items: center;
+    top: 0px;
+    left: 130px;
+}
+.minu2{
+    background-color: transparent;
+    font-weight: 600;
+    border: 3px solid white;
+    width: 75px;
+    margin: 10px;
+    height: 10px;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    padding: 10px;
+    top: 0px;
+    border-radius: 3px;
+    padding-top: 5px;
+    color: white;
+}
+.menu2{
+    width: 0;
+}
+#containerColors2 .menu2{
+    display: none;
+}
+#containerColors2:hover .menu2{
+    display: block;
+}
+.ul2{
+    width: 100px;
+    height: 134px;
+    padding: 5px;
+    list-style: none;
+    border-radius: 2px;
+    position: absolute;
+    left: 35px;
+    top: 30px;
+    background-color: rgba(71, 42, 42, 0.308);
+}
+a{
+    color: white;
+    background-color: transparent;
+}
+/*c*/
+#app{
+    background-color: rgba(222, 216, 216, 0);
+    width: 70%;
+    padding: 33px;
+    height: 400px;
+    margin: auto;
+    margin-top: 90px;
+    border: 3px solid white;
+}
+#value{
+    padding: 20px;
+    text-align: center;
+    width: 94%;
+    background-color: rgba(34, 133, 219, 0);
+    font-size: 10rem;
+    text-shadow: 3px 5px 6px rgba(255, 255, 255, 0);
+    border: 3px solid white;
+    margin-top: -8px;
+}
+.tasks-container{
+    background-color: rgba(182, 72, 72, 0);
+    width: 25%;
+    height: 50px;
+}
+#itTask{
+    width: 32%;
+    height: 38px;
+    background-color: rgba(243, 65, 65, 0);
+    position: absolute;
+    top: 478.5px;
+    left: 34%;
+    font-size: 20px;
+    color: white;
+    border: 3px solid white;
+    padding: 5px;
+}
+ 
+#bAdd{
+   width:  15%;
+   height: 52.5px;
+   position: absolute;
+   top: 478.5px;
+   left: 70%;
+   font-size: 20px;
+   border: 3px solid rgb(255, 255, 255);
+   text-wrap: wrap;
+   background-color: transparent;
+   color: white;
+}
+#tasks{
+    background-color: rgba(218, 39, 39, 0);
+    width: 15%;
+    height: 150px;
+    position: absolute;
+    left: 15.5%;
+    top: 356px;
+    text-align: center;
+    padding: 10px;
+    display: inline-block;
+    text-decoration: underline;
+    border: 3px solid white;
+}
+.start-button{
+    width: 75px;
+    height: 45px;
+    background-image: radial-gradient( blue 10%, rgb(0, 238, 255));
+    position: absolute;
+    color: rgb(218, 160, 160);
+    font-size: 15px;
+    left: 107%;
+    top: 68px;
+    border: 3px solid  rgb(24, 149, 195);
+}
+.done{
+    position: absolute;
+    top: 0px;
+    left: 358%;
+    width: 30%;
+    padding: 5px;
+    height: 25px;
+    color: rgb(192, 191, 255);
+    border: 3px solid rgb(136, 104, 104);
+    background-image: radial-gradient( rgb(9, 82, 94) 10%, rgb(84, 244, 255));
+}
+#taskName{
+    position: absolute;
+    top: 356px;
+    width: 350px;
+    height: 60px;
+    font-size: 25px;
+    left: 34.5%;
+    background-color: rgba(33, 132, 218, 0);
+    text-align: center;
+    text-decoration: underline;
+}
+
+.white:active{
+    background-color: white;
+    color: black;
+}
+.black:active{
+    background-color: black;
+    color: white;
+}
+.blue:active{
+    background-color: blue;
+    color: white;
+}
+.pink:active{
+    background-color: pink;
+    color: black;
+}
+
+
+
+
+@media screen and (max-width: 600px){
+    #app{
+        height: 453px;
+        width: 68%;
+    } 
+    #value{
+    font-size: 6rem;
+    margin-left: -14px;
+    } 
+    #itTask{
+       height: 55px;
+       width: 45%; 
+       top: 530px;
+       left: 12%;
+    }
+    #bAdd{
+     top: 546px;
+     left: 65%;  
+     width: 22%;
+     font-size: 14px;
+     text-wrap: wrap; 
+    }
+    #tasks{
+        width: 25%;
+        top: 300px;
+        height: 200px;
+        left: 12%;
+        text-wrap: wrap;
+    }
+    .start-button{
+        left: 103%;
+        top: 178px;
+        width: 58%;
+        font-size: 15px;
+        overflow: hidden;
+        text-wrap: wrap;
+    }
+    .done{
+        height: 38px;
+        left: 184%;
+        top: 168px;
+    }
+    #taskName{
+        top: 271px;
+        left: 30%;
+        text-decoration: underline;
+        font-size: 25px;
+    }
+}
+ 
+/* bordes: done,start-button,tasks,bAdd,itTask,value, app, mColors,
+/text: start-button,
+text-shadow: bAdd and start-button 

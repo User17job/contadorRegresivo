@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title> app de Tareas </title>
+        <link rel="stylesheet" href="./sss.css">
+    </head> 
+    <body>
+<div id="containerColors"  class="conC"> 
+    <a href="#" class="minu">Bk.colors</a>
+    <div class="menu">
+        <ul>
+            <li   onclick="blanco()" id="color--w" class="m_color-- white">white</li>
+            <li   onclick="negro()" id="color--B" class="m_color-- black">black</li>    
+            <li   onclick="blue()" id="color--b"  class="m_color-- blue">blue</li>  
+            <li   onclick="rosa()" id="color--p"  class="m_color-- pink">pink</li>
+        </ul>
+    </div>  
+</div>
+<!---->
+<div id="containerColors2" class="conC2">
+    <a href="#" class="minu2">B.colors</a>
+    <div class="menu2">
+        <ul class="ul2">
+            <li class="li2 white"><a href="#" id="color-w" class="m_color- white" type="button">white</a></li>
+            <li class="li2 black"><a href="#" id="color-B" class="m_color- black" type="button">black</a></li>    
+            <li class="li2 blue"><a href="#" id="color-b"  class="m_color- blue"  type="button">blue</a></li>  
+            <li class="li2 pink"><a href="#" id="color-p"  class="m_color- pink" type="button">pink</a></li>
+        </ul>
+    </div>
+    
+</div>    
+<!---->
+
+<div id="app" >
+           <!--<audio id="audi"  src="/proyectos/pomodoro/sonido.mp3"></audio>-->
+    <div id="time">
+        <div id="value"></div>
+        <div id="taskName"></div>
+    </div>
+
+    <div class="tasks-container">
+        <div class="form">
+            <form action="" id="form">
+                <input type="text" id="itTask"/>
+                <input type="submit" id="bAdd" value="Agregar Tarea"/>
+            </form>
+        </div>
+            <div id="tasks"></div>
+    </div>
+
+
+</div>    
+<script src="fff.js"></script>
+<!-- <script src="fff2js"></script> -->
+</body>
+</html>
