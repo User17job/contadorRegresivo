@@ -1,9 +1,9 @@
+{
 const tasks = [];
 let time = 0;
 let timer = null;
 let timerBreak = null;
 let current = null;
-
 
 // para el menú
 const contenedor = document.querySelectorAll('.conC');
@@ -132,6 +132,7 @@ function markCompleted(id) {
     tasks[taskIndex].completed = true;
     playi();
 } 
+}
 
 
  
@@ -143,14 +144,15 @@ function markCompleted(id) {
 
 // constantes para el cambio del  color del 
 // background, bordes y letras.
-const toggle = document.getElementById('color--w');
+const toggleb = document.getElementById('color--w');
+const greenBk = document.getElementById('color--v');//////////
 const blueBk = document.getElementById('color--b');
 const pinkBk = document.getElementById('color--p');
 //
 //
 //
 const whiteB = document.getElementById('color-w');
-const blackB = document.getElementById('color-B');
+const greenB = document.getElementById('color-v');
 const blueB = document.getElementById('color-b');
 const pinkB = document.getElementById('color-p');
 
@@ -159,7 +161,6 @@ const pinkB = document.getElementById('color-p');
 // las constantes de lo que se cambiara 
 const Body = document.querySelector('* body');
 const App = document.querySelector('#app');
-//const Time = document.querySelector('#time');
 const bAdd = document.querySelector("#bAdd");
 const itTask = document.querySelector("#itTask");
 const taskName = document.querySelector('#time #taskName');
@@ -167,101 +168,407 @@ const contenedorDeTareas = document.querySelector('#tasks');
 const valorN = document.querySelector('#value');
 const boton = document.querySelector('.minu');
 const boton2 = document.querySelector('.minu2');
-
 const start = document.querySelectorAll('.task .start-button');
-
-
-
-toggle.addEventListener('click',  function(){
-    //this.classList.toggle('');
-    if(this.classList.toggle('white')){
-        //
-        Body.style.background='black';
-        Body.style.color='white';
-        Body.style.transition='2s';
-        //
-        App.style.border='3px solid white';
-        App.style.background='black';
-        App.style.color='white';
-        App.style.transition='2s'
-        //
-        valorN.style.border='3px solid white';  
-        valorN.style.background='black';    
-        valorN.style.color='white';
-        valorN.style.transition='2s';    
-        //
-        bAdd.style.border='3px solid white';
-        bAdd.style.color='white';
-        bAdd.style.transition='2s';
-        //
-        itTask.style.border='3px solid white';
-        itTask.style.color='white';
-        itTask.style.transition='2s';
-        //
-        taskName.style.border='3px solid white';
-        taskName.style.color='white';
-        taskName.style.transition='2s';
-        //
-        contenedorDeTareas.style.border='3px solid white';
-        contenedorDeTareas.style.color='white';
-        contenedorDeTareas.style.transition='2s';
-        //
-        boton.style.border='3px solid white';
-        boton.style.color='white';
-        boton.style.transition='2s';
-        //
-        boton2.style.border='3px solid white';
-        boton2.style.color='white';
-        boton2.style.transition='2s';
-        //
-        start.style.border='3px solid black';
-        start.style.color='white';
-        start.style.transition='2s';
-        // 
-    }else{
-        Body.style.background='white';
-        Body.style.color='black';
-        //        
-        App.style.border='3px solid black';
-        App.style.background='white';
-        App.style.color='black';
-        //
-        valorN.style.border='3px solid black';      
-        valorN.style.background='white';   
-        valorN.style.color='black';   
-        //
-        bAdd.style.border='3px solid black'
-        bAdd.style.color='black'
-        //  
-        itTask.style.border='3px solid black';
-        itTask.style.color='black';
-        //
-        taskName.style.border='3px solid black';
-        taskName.style.color='black';
-        //
-        contenedorDeTareas.style.border='3px solid black';
-        contenedorDeTareas.style.color='black';
-        //
-        boton.style.border='3px solid black';
-        boton.style.color='black';
-        //
-        boton2.style.border='3px solid black';
-        boton2.style.color='black';
-        //
-        start.style.border='3px solid black';
-        start.style.color='black';
-    }
-});
+const ul = document.querySelectorAll('ul');
 
 
 
 
-const toggleb = document.querySelector('.color--B');
-toggleb.addEventListener('click',  function(){
-    //this.classList.toggle('');
-    if(this.classList.tog('color--B')){
-//
+
+
+
+function blanco(){
+            Body.style.background='white';
+             Body.style.color='black';
+             //        
+             App.style.border='3px solid black';
+             App.style.background='white';
+             App.style.color='black';
+             //
+             valorN.style.border='3px solid black';      
+             valorN.style.background='white';   
+             valorN.style.color='black';   
+             //
+             bAdd.style.border='3px solid black'
+             bAdd.style.color='black'
+             //  
+             itTask.style.border='3px solid black';
+             itTask.style.color='black';
+             //
+             taskName.style.border='3px solid black';
+             taskName.style.color='black';
+             //
+             contenedorDeTareas.style.border='3px solid black';
+             contenedorDeTareas.style.color='black';
+             //
+             boton.style.border='3px solid black';
+             boton.style.color='black';
+             //
+             boton2.style.border='3px solid black';
+             boton2.style.color='black';
+             //
+             start.style.border='3px solid black';
+             start.style.color='black';
+             //
+             ul.style.border='3px solid blac';
+             ul.style.color='black';
+
+             style.transition='2s'
+}
+
+
+function negro(){
     Body.style.background='black';
+     Body.style.color='white';
+     //        
+     App.style.border='3px solid white';
+     App.style.background='black';
+     App.style.color='white';
+     //
+     valorN.style.border='3px solid white';      
+     valorN.style.background='black';   
+     valorN.style.color='white';   
+     //
+     bAdd.style.border='3px solid white'
+     bAdd.style.color='white'
+     //  
+     itTask.style.border='3px solid white';
+     itTask.style.color='white';
+     //
+     taskName.style.border='3px solid white';
+     taskName.style.color='white';
+     //
+     contenedorDeTareas.style.border='3px solid white';
+     contenedorDeTareas.style.color='white';
+     //
+     boton.style.border='3px solid white';
+     boton.style.color='white';
+     //
+     boton2.style.border='3px solid white';
+     boton2.style.color='white';
+     //
+     start.style.border='3px solid white';
+     start.style.color='white';
+     //
+     ul.style.border='3px solid white';
+     ul.style.color='white';
+}
+
+function azul(){
+    Body.style.background='blue';
+     Body.style.color='white';
+     //        
+     App.style.border='3px solid white';
+     App.style.background='blue';
+     App.style.color='white';
+     //
+     valorN.style.border='3px solid white';      
+     valorN.style.background='blue';   
+     valorN.style.color='white';   
+     //
+     bAdd.style.border='3px solid white'
+     bAdd.style.color='white'
+     //  
+     itTask.style.border='3px solid white';
+     itTask.style.color='white';
+     //
+     taskName.style.border='3px solid white';
+     taskName.style.color='white';
+     //
+     contenedorDeTareas.style.border='3px solid white';
+     contenedorDeTareas.style.color='white';
+     //
+     boton.style.border='3px solid white';
+     boton.style.color='white';
+     //
+     boton2.style.border='3px solid white';
+     boton2.style.color='white';
+     //
+     start.style.border='3px solid white';
+     start.style.color='white';
+     //
+     ul.style.border='3px solid white';
+     ul.style.color='white';
+}
+
+function rosa(){
+    Body.style.background='pink';
+     Body.style.color='white';
+     //        
+     App.style.border='3px solid white';
+     App.style.background='pink';
+     App.style.color='white';
+     //
+     valorN.style.border='3px solid white';      
+     valorN.style.background='pink';   
+     valorN.style.color='white';   
+     //
+     bAdd.style.border='3px solid white'
+     bAdd.style.color='white'
+     //  
+     itTask.style.border='3px solid white';
+     itTask.style.color='white';
+     //
+     taskName.style.border='3px solid white';
+     taskName.style.color='white';
+     //
+     contenedorDeTareas.style.border='3px solid white';
+     contenedorDeTareas.style.color='white';
+     //
+     boton.style.border='3px solid white';
+     boton.style.color='white';
+     //
+     boton2.style.border='3px solid white';
+     boton2.style.color='white';
+     //
+     start.style.border='3px solid white';
+     start.style.color='white';
+     //
+     ul.style.border='3px solid white';
+     ul.style.color='white';
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// toggleb.addEventListener('click',  function(){
+//     if(this.classList.toggle('white')){
+//         //
+//         Body.style.background='black';
+//         Body.style.color='white';
+//         Body.style.transition='2s';
+//         //
+//         App.style.border='3px solid white';
+//         App.style.background='black';
+//         App.style.color='white';
+//         App.style.transition='2s';
+//         //
+//         valorN.style.border='3px solid white';  
+//         valorN.style.background='black';    
+//         valorN.style.color='white';
+//         valorN.style.transition='2s';    
+//         //
+//         bAdd.style.border='3px solid white';
+//         bAdd.style.color='white';
+//         bAdd.style.transition='2s';
+//         //
+//         itTask.style.border='3px solid white';
+//         itTask.style.color='white';
+//         itTask.style.transition='2s';
+//         //
+//         taskName.style.border='3px solid white';
+//         taskName.style.color='white';
+//         taskName.style.transition='2s';
+//         //
+//         contenedorDeTareas.style.border='3px solid white';
+//         contenedorDeTareas.style.color='white';
+//         contenedorDeTareas.style.transition='2s';
+//         //
+//         boton.style.border='3px solid white';
+//         boton.style.color='white';
+//         boton.style.transition='2s';
+//         //
+//         boton2.style.border='3px solid white';
+//         boton2.style.color='white';
+//         boton2.style.transition='2s';
+//         //
+//         start.style.border='3px solid white';
+//         start.style.color='white';
+//         start.style.transition='2s';
+//         // 
+//         ul.style.border='3px solid white';
+//         ul.style.color='white';
+//         ul.style.transition='2s';
+//         //
+// }else{
+//         Body.style.background='white';
+//         Body.style.color='black';
+//         //        
+//         App.style.border='3px solid black';
+//         App.style.background='white';
+//         App.style.color='black';
+//         //
+//         valorN.style.border='3px solid black';      
+//         valorN.style.background='white';   
+//         valorN.style.color='black';   
+//         //
+//         bAdd.style.border='3px solid black'
+//         bAdd.style.color='black'
+//         //  
+//         itTask.style.border='3px solid black';
+//         itTask.style.color='black';
+//         //
+//         taskName.style.border='3px solid black';
+//         taskName.style.color='black';
+//         //
+//         contenedorDeTareas.style.border='3px solid black';
+//         contenedorDeTareas.style.color='black';
+//         //
+//         boton.style.border='3px solid black';
+//         boton.style.color='black';
+//         //
+//         boton2.style.border='3px solid black';
+//         boton2.style.color='black';
+//         //
+//         start.style.border='3px solid black';
+//         start.style.color='black';
+//         //
+//         ul.style.border='3px solid blac';
+//         ul.style.color='black';
+//         //
+//     }
+// });
+
+
+
+
+// greenBk.addEventListener('click',  function(){
+//     if(this.idList.toggle('verde')){
+//                 //
+//                 Body.style.background='green';
+//                 Body.style.color='white';
+//                 Body.style.transition='2s';
+//                 //
+//                 App.style.border='3px solid white';
+//                 App.style.background='green';
+//                 App.style.color='white';
+//                 App.style.transition='2s'
+//                 //
+//                 valorN.style.border='3px solid white';  
+//                 valorN.style.background='green';    
+//                 valorN.style.color='white';
+//                 valorN.style.transition='2s';    
+//                 //
+//                 bAdd.style.border='3px solid white';
+//                 bAdd.style.color='white';
+//                 bAdd.style.transition='2s';
+//                 //
+//                 itTask.style.border='3px solid white';
+//                 itTask.style.color='white';
+//                 itTask.style.transition='2s';
+//                 //
+//                 taskName.style.border='3px solid white';
+//                 taskName.style.color='white';
+//                 taskName.style.transition='2s';
+//                 //
+//                 contenedorDeTareas.style.border='3px solid white';
+//                 contenedorDeTareas.style.color='white';
+//                 contenedorDeTareas.style.transition='2s';
+//                 //
+//                 boton.style.border='3px solid white';
+//                 boton.style.color='white';
+//                 boton.style.transition='2s';
+//                 //
+//                 boton2.style.border='3px solid white';
+//                 boton2.style.color='white';
+//                 boton2.style.transition='2s';
+//                 //
+//                 start.style.border='3px solid black';
+//                 start.style.color='white';
+//                 start.style.transition='2s';
+//                 // 
+//            }else{
+//                 Body.style.background='white';
+//                 Body.style.color='black';
+//                 //        
+//                 App.style.border='3px solid black';
+//                 App.style.background='white';
+//                 App.style.color='black';
+//                 //
+//                 valorN.style.border='3px solid black';      
+//                 valorN.style.background='white';   
+//                 valorN.style.color='black';   
+//                 //
+//                 bAdd.style.border='3px solid black'
+//                 bAdd.style.color='black'
+//                 //  
+//                 itTask.style.border='3px solid black';
+//                 itTask.style.color='black';
+//                 //
+//                 taskName.style.border='3px solid black';
+//                 taskName.style.color='black';
+//                 //
+//                 contenedorDeTareas.style.border='3px solid black';
+//                 contenedorDeTareas.style.color='black';
+//                 //
+//                 boton.style.border='3px solid black';
+//                 boton.style.color='black';
+//                 //
+//                 boton2.style.border='3px solid black';
+//                 boton2.style.color='black';
+//                 //
+//                 start.style.border='3px solid black';
+//                 start.style.color='black';
+//     }
+// });
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+ Body.style.background='black';
     Body.style.color='white';
     Body.style.transition='2s';
 //
@@ -299,7 +606,7 @@ toggleb.addEventListener('click',  function(){
     boton2.style.color='white';
     boton2.style.transition='2s';
 //
-    start.style.border='3px solid black';
+    start.style.border='3px solid white';/////
     start.style.color='white';
     start.style.transition='2s';
 // 
@@ -334,7 +641,4 @@ toggleb.addEventListener('click',  function(){
     boton2.style.color='black';
 //
     start.style.border='3px solid black';
-    start.style.color='black';
-    }
-});
- 
+    start.style.color='black'; */

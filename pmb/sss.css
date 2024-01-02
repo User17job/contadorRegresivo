@@ -39,6 +39,7 @@ display: none;
 }
 #containerColors:hover .menu{
     display: block;
+    cursor: pointer;
 }
 ul {
     width: 100px;
@@ -101,6 +102,7 @@ a{text-decoration: none;}
 }
 #containerColors2:hover .menu2{
     display: block;
+    cursor: pointer;
 }
 .ul2{
     width: 100px;
@@ -218,8 +220,8 @@ a{
     background-color: white;
     color: black;
 }
-.black:active{
-    background-color: black;
+.verde:active{
+    background-color: green;
     color: white;
 }
 .blue:active{
