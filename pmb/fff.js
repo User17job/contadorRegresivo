@@ -1,5 +1,21 @@
-{
-const tasks = [];
+
+// constantes para el cambio del  color del 
+// background, bordes y letras.
+const whiteBk = document.getElementById('color--w');
+const blackBk = document.getElementById("color--B");//////////
+const blueBk = document.getElementById('color--b');
+const pinkBk = document.getElementById('color--p');
+//
+//
+//
+const whiteB = document.getElementById('color-w');
+const greenB = document.getElementById('color-v');
+const blueB = document.getElementById('color-b');
+const pinkB = document.getElementById('color-p');
+
+
+
+const tasks = [];  
 let time = 0;
 let timer = null;
 let timerBreak = null;
@@ -9,7 +25,6 @@ let current = null;
 const contenedor = document.querySelectorAll('.conC');
 //constantes para el contador
 const form = document.querySelector("#form");
-
 // principales funciones
 renderTime();
 renderTasks();
@@ -36,12 +51,11 @@ function createTask(value) {
 }
 
 //segunda función; para generar elementos para html las cuales van a mostrar la tarea y avisar si ya terminaste la tarea 
-
 function renderTasks() {
     const html = tasks.map(task => {
         return `
         <div class="task">
-            <div class="completed">${task.completed ? `<span class="done">Done</span>` : `<button class="start-button" data-id="${task.id}">Start</button>`}</div>
+            <div class="completed">${task.completed ? `<span id="don" class="done">Done</span>` : `<button id="stt" class="start-button" data-id="${task.id}">Start</button>`}</div>
             <div class="title">${task.title}</div>
         </div>
         `;
@@ -73,7 +87,7 @@ function playi2() {
 }
 // tercera funcion para empezar a contar 
 function startButtonHandler(id) {
-    time = 30 * 60;
+    time = 30 * 1;
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
     taskName.textContent = tasks[taskIndex].title;
@@ -132,513 +146,474 @@ function markCompleted(id) {
     tasks[taskIndex].completed = true;
     playi();
 } 
-}
-
-
- 
- 
-
-
-
-
-
-// constantes para el cambio del  color del 
-// background, bordes y letras.
-const toggleb = document.getElementById('color--w');
-const greenBk = document.getElementById('color--v');//////////
-const blueBk = document.getElementById('color--b');
-const pinkBk = document.getElementById('color--p');
-//
-//
-//
-const whiteB = document.getElementById('color-w');
-const greenB = document.getElementById('color-v');
-const blueB = document.getElementById('color-b');
-const pinkB = document.getElementById('color-p');
-
-
-
-// las constantes de lo que se cambiara 
-const Body = document.querySelector('* body');
-const App = document.querySelector('#app');
-const bAdd = document.querySelector("#bAdd");
-const itTask = document.querySelector("#itTask");
-const taskName = document.querySelector('#time #taskName');
-const contenedorDeTareas = document.querySelector('#tasks');
-const valorN = document.querySelector('#value');
-const boton = document.querySelector('.minu');
-const boton2 = document.querySelector('.minu2');
-const start = document.querySelectorAll('.task .start-button');
-const ul = document.querySelectorAll('ul');
-
-
-
-
-
-
 
 function blanco(){
-            Body.style.background='white';
-             Body.style.color='black';
-             //        
-             App.style.border='3px solid black';
-             App.style.background='white';
-             App.style.color='black';
-             //
-             valorN.style.border='3px solid black';      
-             valorN.style.background='white';   
-             valorN.style.color='black';   
-             //
-             bAdd.style.border='3px solid black'
-             bAdd.style.color='black'
-             //  
-             itTask.style.border='3px solid black';
-             itTask.style.color='black';
-             //
-             taskName.style.border='3px solid black';
-             taskName.style.color='black';
-             //
-             contenedorDeTareas.style.border='3px solid black';
-             contenedorDeTareas.style.color='black';
-             //
-             boton.style.border='3px solid black';
-             boton.style.color='black';
-             //
-             boton2.style.border='3px solid black';
-             boton2.style.color='black';
-             //
-             start.style.border='3px solid black';
-             start.style.color='black';
-             //
-             ul.style.border='3px solid blac';
-             ul.style.color='black';
-
-             style.transition='2s'
-}
-
-
-function negro(){
-    Body.style.background='black';
-     Body.style.color='white';
-     //        
-     App.style.border='3px solid white';
-     App.style.background='black';
-     App.style.color='white';
-     //
-     valorN.style.border='3px solid white';      
-     valorN.style.background='black';   
-     valorN.style.color='white';   
-     //
-     bAdd.style.border='3px solid white'
-     bAdd.style.color='white'
-     //  
-     itTask.style.border='3px solid white';
-     itTask.style.color='white';
-     //
-     taskName.style.border='3px solid white';
-     taskName.style.color='white';
-     //
-     contenedorDeTareas.style.border='3px solid white';
-     contenedorDeTareas.style.color='white';
-     //
-     boton.style.border='3px solid white';
-     boton.style.color='white';
-     //
-     boton2.style.border='3px solid white';
-     boton2.style.color='white';
-     //
-     start.style.border='3px solid white';
-     start.style.color='white';
-     //
-     ul.style.border='3px solid white';
-     ul.style.color='white';
-}
-
-function azul(){
-    Body.style.background='blue';
-     Body.style.color='white';
-     //        
-     App.style.border='3px solid white';
-     App.style.background='blue';
-     App.style.color='white';
-     //
-     valorN.style.border='3px solid white';      
-     valorN.style.background='blue';   
-     valorN.style.color='white';   
-     //
-     bAdd.style.border='3px solid white'
-     bAdd.style.color='white'
-     //  
-     itTask.style.border='3px solid white';
-     itTask.style.color='white';
-     //
-     taskName.style.border='3px solid white';
-     taskName.style.color='white';
-     //
-     contenedorDeTareas.style.border='3px solid white';
-     contenedorDeTareas.style.color='white';
-     //
-     boton.style.border='3px solid white';
-     boton.style.color='white';
-     //
-     boton2.style.border='3px solid white';
-     boton2.style.color='white';
-     //
-     start.style.border='3px solid white';
-     start.style.color='white';
-     //
-     ul.style.border='3px solid white';
-     ul.style.color='white';
-}
-
-function rosa(){
-    Body.style.background='pink';
-     Body.style.color='white';
-     //        
-     App.style.border='3px solid white';
-     App.style.background='pink';
-     App.style.color='white';
-     //
-     valorN.style.border='3px solid white';      
-     valorN.style.background='pink';   
-     valorN.style.color='white';   
-     //
-     bAdd.style.border='3px solid white'
-     bAdd.style.color='white'
-     //  
-     itTask.style.border='3px solid white';
-     itTask.style.color='white';
-     //
-     taskName.style.border='3px solid white';
-     taskName.style.color='white';
-     //
-     contenedorDeTareas.style.border='3px solid white';
-     contenedorDeTareas.style.color='white';
-     //
-     boton.style.border='3px solid white';
-     boton.style.color='white';
-     //
-     boton2.style.border='3px solid white';
-     boton2.style.color='white';
-     //
-     start.style.border='3px solid white';
-     start.style.color='white';
-     //
-     ul.style.border='3px solid white';
-     ul.style.color='white';
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// toggleb.addEventListener('click',  function(){
-//     if(this.classList.toggle('white')){
-//         //
-//         Body.style.background='black';
-//         Body.style.color='white';
-//         Body.style.transition='2s';
-//         //
-//         App.style.border='3px solid white';
-//         App.style.background='black';
-//         App.style.color='white';
-//         App.style.transition='2s';
-//         //
-//         valorN.style.border='3px solid white';  
-//         valorN.style.background='black';    
-//         valorN.style.color='white';
-//         valorN.style.transition='2s';    
-//         //
-//         bAdd.style.border='3px solid white';
-//         bAdd.style.color='white';
-//         bAdd.style.transition='2s';
-//         //
-//         itTask.style.border='3px solid white';
-//         itTask.style.color='white';
-//         itTask.style.transition='2s';
-//         //
-//         taskName.style.border='3px solid white';
-//         taskName.style.color='white';
-//         taskName.style.transition='2s';
-//         //
-//         contenedorDeTareas.style.border='3px solid white';
-//         contenedorDeTareas.style.color='white';
-//         contenedorDeTareas.style.transition='2s';
-//         //
-//         boton.style.border='3px solid white';
-//         boton.style.color='white';
-//         boton.style.transition='2s';
-//         //
-//         boton2.style.border='3px solid white';
-//         boton2.style.color='white';
-//         boton2.style.transition='2s';
-//         //
-//         start.style.border='3px solid white';
-//         start.style.color='white';
-//         start.style.transition='2s';
-//         // 
-//         ul.style.border='3px solid white';
-//         ul.style.color='white';
-//         ul.style.transition='2s';
-//         //
-// }else{
-//         Body.style.background='white';
-//         Body.style.color='black';
-//         //        
-//         App.style.border='3px solid black';
-//         App.style.background='white';
-//         App.style.color='black';
-//         //
-//         valorN.style.border='3px solid black';      
-//         valorN.style.background='white';   
-//         valorN.style.color='black';   
-//         //
-//         bAdd.style.border='3px solid black'
-//         bAdd.style.color='black'
-//         //  
-//         itTask.style.border='3px solid black';
-//         itTask.style.color='black';
-//         //
-//         taskName.style.border='3px solid black';
-//         taskName.style.color='black';
-//         //
-//         contenedorDeTareas.style.border='3px solid black';
-//         contenedorDeTareas.style.color='black';
-//         //
-//         boton.style.border='3px solid black';
-//         boton.style.color='black';
-//         //
-//         boton2.style.border='3px solid black';
-//         boton2.style.color='black';
-//         //
-//         start.style.border='3px solid black';
-//         start.style.color='black';
-//         //
-//         ul.style.border='3px solid blac';
-//         ul.style.color='black';
-//         //
-//     }
-// });
-
-
-
-
-// greenBk.addEventListener('click',  function(){
-//     if(this.idList.toggle('verde')){
-//                 //
-//                 Body.style.background='green';
-//                 Body.style.color='white';
-//                 Body.style.transition='2s';
-//                 //
-//                 App.style.border='3px solid white';
-//                 App.style.background='green';
-//                 App.style.color='white';
-//                 App.style.transition='2s'
-//                 //
-//                 valorN.style.border='3px solid white';  
-//                 valorN.style.background='green';    
-//                 valorN.style.color='white';
-//                 valorN.style.transition='2s';    
-//                 //
-//                 bAdd.style.border='3px solid white';
-//                 bAdd.style.color='white';
-//                 bAdd.style.transition='2s';
-//                 //
-//                 itTask.style.border='3px solid white';
-//                 itTask.style.color='white';
-//                 itTask.style.transition='2s';
-//                 //
-//                 taskName.style.border='3px solid white';
-//                 taskName.style.color='white';
-//                 taskName.style.transition='2s';
-//                 //
-//                 contenedorDeTareas.style.border='3px solid white';
-//                 contenedorDeTareas.style.color='white';
-//                 contenedorDeTareas.style.transition='2s';
-//                 //
-//                 boton.style.border='3px solid white';
-//                 boton.style.color='white';
-//                 boton.style.transition='2s';
-//                 //
-//                 boton2.style.border='3px solid white';
-//                 boton2.style.color='white';
-//                 boton2.style.transition='2s';
-//                 //
-//                 start.style.border='3px solid black';
-//                 start.style.color='white';
-//                 start.style.transition='2s';
-//                 // 
-//            }else{
-//                 Body.style.background='white';
-//                 Body.style.color='black';
-//                 //        
-//                 App.style.border='3px solid black';
-//                 App.style.background='white';
-//                 App.style.color='black';
-//                 //
-//                 valorN.style.border='3px solid black';      
-//                 valorN.style.background='white';   
-//                 valorN.style.color='black';   
-//                 //
-//                 bAdd.style.border='3px solid black'
-//                 bAdd.style.color='black'
-//                 //  
-//                 itTask.style.border='3px solid black';
-//                 itTask.style.color='black';
-//                 //
-//                 taskName.style.border='3px solid black';
-//                 taskName.style.color='black';
-//                 //
-//                 contenedorDeTareas.style.border='3px solid black';
-//                 contenedorDeTareas.style.color='black';
-//                 //
-//                 boton.style.border='3px solid black';
-//                 boton.style.color='black';
-//                 //
-//                 boton2.style.border='3px solid black';
-//                 boton2.style.color='black';
-//                 //
-//                 start.style.border='3px solid black';
-//                 start.style.color='black';
-//     }
-// });
- 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*
- Body.style.background='black';
-    Body.style.color='white';
-    Body.style.transition='2s';
-//
-    App.style.border='3px solid white';
-    App.style.background='black';
-    App.style.color='white';
-    App.style.transition='2s'
-//
-    valorN.style.border='3px solid white';  
-    valorN.style.background='black';    
-    valorN.style.color='white';
-    valorN.style.transition='2s';    
-//
-    bAdd.style.border='3px solid white';
-    bAdd.style.color='white';
-    bAdd.style.transition='2s';
-//
-    itTask.style.border='3px solid white';
-    itTask.style.color='white';
-    itTask.style.transition='2s';
-//
-    taskName.style.border='3px solid white';
-    taskName.style.color='white';
-    taskName.style.transition='2s';
-//
-    contenedorDeTareas.style.border='3px solid white';
-    contenedorDeTareas.style.color='white';
-    contenedorDeTareas.style.transition='2s';
-//
-    boton.style.border='3px solid white';
-    boton.style.color='white';
-    boton.style.transition='2s';
-//
-    boton2.style.border='3px solid white';
-    boton2.style.color='white';
-    boton2.style.transition='2s';
-//
-    start.style.border='3px solid white';/////
-    start.style.color='white';
-    start.style.transition='2s';
-// 
-}else{
+    var Body = document.querySelector('body');//
     Body.style.background='white';
     Body.style.color='black';
-//        
-    App.style.border='3px solid black';
-    App.style.background='white';
-    App.style.color='black';
-//
-    valorN.style.border='3px solid black';      
-    valorN.style.background='white';   
-    valorN.style.color='black';   
-//
-    bAdd.style.border='3px solid black'
-    bAdd.style.color='black'
-//  
-    itTask.style.border='3px solid black';
+
+    var app =  document.querySelector('#app');//
+    app.style.border= '3px solid black';
+    app.style.color= 'black';
+
+    var bAdd =document.querySelector("#bAdd");//
+    bAdd.style.border='3px solid black';
+    bAdd.style.color='black';
+
+    var itTask = document.querySelector("#itTask");//
+    itTask.style.border=' 3px solid black';
     itTask.style.color='black';
-//
-    taskName.style.border='3px solid black';
-    taskName.style.color='black';
-//
-    contenedorDeTareas.style.border='3px solid black';
-    contenedorDeTareas.style.color='black';
-//
-    boton.style.border='3px solid black';
-    boton.style.color='black';
-//
-    boton2.style.border='3px solid black';
-    boton2.style.color='black';
-//
+
+    var taskName = document.querySelector('#taskName'); //
+    taskName.style.border='3px solid black'; 
+    taskName.style.color=' black';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+    contenedorDeTareas.style.border='3px solid black'; // 
+    contenedorDeTareas.style.color='black'; 
+
+    var valorN = document.querySelector('#value');//
+    valorN.style.color='black';
+    valorN.style.border=' 3px solid black';
+
+    var botons = document.getElementById('minu1');//
+    botons.style.border='3px solid black';
+    botons.style.color='black';
+
+    var boton = document.getElementById('minu2');//
+    boton.style.border  ='3px solid black';
+    boton.style.color ='black';
+
+    var lista = document.getElementById('color-w');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color-B');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color-b');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color-p');//
+    lista.style.color = 'white';
+
+    var lista = document.getElementById('color--w');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color--B');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color--b');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color--p');//
+    lista.style.color = 'white';
+
+    var start = document.querySelector('#stt');
     start.style.border='3px solid black';
-    start.style.color='black'; */
+    start.style.color='black';
+    start.style.boxShadow='none';
+}
+function negro(){
+    var Body = document.querySelector('body');//
+     Body.style.background='black';
+     Body.style.color='white';
+
+    var app =  document.querySelector('#app');//
+     app.style.border= '3px solid white';
+     app.style.color= 'white';
+
+    var bAdd =document.querySelector("#bAdd");//
+     bAdd.style.border='3px solid white';
+     bAdd.style.color='white';
+
+    var itTask = document.querySelector("#itTask");//
+     itTask.style.border=' 3px solid white';
+     itTask.style.color='white';
+
+    var taskName = document.querySelector('#taskName'); //
+     taskName.style.border='3px solid white'; 
+     taskName.style.color=' white';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+     contenedorDeTareas.style.border='3px solid white'; // 
+     contenedorDeTareas.style.color='white'; 
+
+    var valorN = document.querySelector('#value');//
+     valorN.style.color='white';
+     valorN.style.border=' 3px solid white';
+
+    var botons = document.getElementById('minu1');//
+     botons.style.border='3px solid white';
+     botons.style.color='white';
+
+    var boton = document.getElementById('minu2');//
+     boton.style.border  ='3px solid white';
+     boton.style.color ='white';
+
+    var lista = document.getElementById('color-w');//
+     lista.style.color = 'white';
+    var lista = document.getElementById('color-B');//
+     lista.style.color = 'white';
+    var lista = document.getElementById('color-b');//
+     lista.style.color = 'white';
+    var lista = document.getElementById('color-p');//
+     lista.style.color = 'white';
+
+    var lista = document.getElementById('color--w');//
+     lista.style.color = 'white';
+    var lista = document.getElementById('color--B');//
+     lista.style.color = 'white';
+    var lista = document.getElementById('color--b');//
+     lista.style.color = 'white';
+    var lista = document.getElementById('color--p');//
+     lista.style.color = 'white';
+
+     
+    var start = document.querySelector('#stt');
+    start.style.border='3px solid white';
+    start.style.color='white';
+    start.style.boxShadow='none';
+}
+function azul(){
+    var Body = document.querySelector('body');//
+    Body.style.background='blue';
+    Body.style.color='green';
+
+    var app =  document.querySelector('#app');//
+    app.style.border= '3px solid green';
+    app.style.color= 'green';
+
+    var bAdd =document.querySelector("#bAdd");//
+    bAdd.style.border='3px solid green';
+    bAdd.style.color='green';
+
+    var itTask = document.querySelector("#itTask");//
+    itTask.style.border=' 3px solid green';
+    itTask.style.color='green';
+
+    var taskName = document.querySelector('#taskName'); //
+    taskName.style.border='3px solid green'; 
+    taskName.style.color='green';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+    contenedorDeTareas.style.border='3px solid green'; // 
+    contenedorDeTareas.style.color='green'; 
+
+    var valorN = document.querySelector('#value');//
+    valorN.style.color='green';
+    valorN.style.border=' 3px solid green';
+
+    var botons = document.getElementById('minu1');//
+    botons.style.border='3px solid green';
+    botons.style.color='green';
+
+    var boton = document.getElementById('minu2');//
+    boton.style.border  ='3px solid green';
+    boton.style.color ='green';
+
+    var lista = document.getElementById('color-w');//
+    lista.style.color = 'green';
+    var lista = document.getElementById('color-B');//
+    lista.style.color = 'green';
+    var lista = document.getElementById('color-b');//
+    lista.style.color = 'green';
+    var lista = document.getElementById('color-p');//
+    lista.style.color = 'green';
+
+    var lista = document.getElementById('color--w');//
+    lista.style.color = 'green';
+    var lista = document.getElementById('color--B');//
+    lista.style.color = 'green';
+    var lista = document.getElementById('color--b');//
+    lista.style.color = 'green';
+    var lista = document.getElementById('color--p');//
+    lista.style.color = 'green';
+    
+    var start = document.querySelector('#stt');
+    start.style.border='3px solid green';
+    start.style.color='green';
+    start.style.boxShadow='none';
+}
+function rosa(){
+    var Body = document.querySelector('body');//
+    Body.style.background='pink';
+    Body.style.color='white';
+
+    var app =  document.querySelector('#app');//
+    app.style.border= '3px solid bisque';
+    app.style.color= 'bisque';
+
+    var bAdd =document.querySelector("#bAdd");//
+    bAdd.style.border='3px solid bisque';
+    bAdd.style.color='bisque';
+
+    var itTask = document.querySelector("#itTask");//
+    itTask.style.border=' 3px solid bisque';
+    itTask.style.color='bisque';
+
+    var taskName = document.querySelector('#taskName'); //
+    taskName.style.border='3px solid bisque'; 
+    taskName.style.color=' bisque';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+    contenedorDeTareas.style.border='3px solid bisque'; // 
+    contenedorDeTareas.style.color='bisque'; 
+
+    var valorN = document.querySelector('#value');//
+    valorN.style.color='bisque';
+    valorN.style.border=' 3px solid bisque';
+
+    var botons = document.getElementById('minu1');//
+    botons.style.border='3px solid bisque';
+    botons.style.color='bisque';
+
+    var boton = document.getElementById('minu2');//
+    boton.style.border  ='3px solid bisque';
+    boton.style.color ='bisque';
+
+    var lista = document.getElementById('color-w');//
+    lista.style.color = 'bisque';
+    var lista = document.getElementById('color-B');//
+    lista.style.color = 'bisque';
+    var lista = document.getElementById('color-b');//
+    lista.style.color = 'bisque';
+    var lista = document.getElementById('color-p');//
+    lista.style.color = 'bisque';
+
+    var lista = document.getElementById('color--w');//
+    lista.style.color = 'bisque';
+    var lista = document.getElementById('color--B');//
+    lista.style.color = 'bisque';
+    var lista = document.getElementById('color--b');//
+    lista.style.color = 'bisque';
+    var lista = document.getElementById('color--p');//
+    lista.style.color = 'bisque';
+    
+    var start = document.querySelector('#stt');
+    start.style.border='3px solid bisque';
+    start.style.color='bisque';
+    start.style.boxShadow='none';    
+}
+
+
+
+
+function color1(){
+     app.style.border= '3px solid white';
+    app.style.color= 'white';
+
+    var bAdd =document.querySelector("#bAdd");//
+    bAdd.style.border='3px solid white';
+    bAdd.style.color='white';
+
+    var itTask = document.querySelector("#itTask");//
+    itTask.style.border=' 3px solid white';
+    itTask.style.color='white';
+
+    var taskName = document.querySelector('#taskName'); //
+    taskName.style.border='3px solid white'; 
+    taskName.style.color='white';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+    contenedorDeTareas.style.border='3px solid white'; // 
+    contenedorDeTareas.style.color='white'; 
+
+    var valorN = document.querySelector('#value');//
+    valorN.style.color='white';
+    valorN.style.border=' 3px solid white';
+
+    var botons = document.getElementById('minu1');//
+    botons.style.border='3px solid white';
+    botons.style.color='white';
+
+    var boton = document.getElementById('minu2');//
+    boton.style.border  ='3px solid white';
+    boton.style.color ='white';
+
+    var lista = document.getElementById('color-w');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color-B');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color-b');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color-p');//
+    lista.style.color = 'white';
+
+    var lista = document.getElementById('color--w');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color--B');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color--b');//
+    lista.style.color = 'white';
+    var lista = document.getElementById('color--p');//
+    lista.style.color = 'white';
+
+    
+    var start = document.querySelector('#stt');
+    start.style.border='3px solid white';
+    start.style.color='white';
+    start.style.boxShadow=' 0px 0px 9px white';
+}
+function color2(){
+    app.style.border= '3px solid #DC416D';
+    app.style.color= '#DC416D';
+
+    var bAdd =document.querySelector("#bAdd");//
+    bAdd.style.border='3px solid #DC416D';
+    bAdd.style.color='#DC416D';
+
+    var itTask = document.querySelector("#itTask");//
+    itTask.style.border=' 3px solid #DC416D';
+    itTask.style.color='#DC416D';
+
+    var taskName = document.querySelector('#taskName'); //
+    taskName.style.border='3px solid #DC416D'; 
+    taskName.style.color='#DC416D';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+    contenedorDeTareas.style.border='3px solid #DC416D'; // 
+    contenedorDeTareas.style.color='#DC416D'; 
+
+    var valorN = document.querySelector('#value');//
+    valorN.style.color='#DC416D';
+    valorN.style.border=' 3px solid #DC416D';
+
+    var botons = document.getElementById('minu1');//
+    botons.style.border='3px solid #DC416D';
+    botons.style.color='#DC416D';
+
+    var boton = document.getElementById('minu2');//
+    boton.style.border  ='3px solid #DC416D';
+    boton.style.color ='#DC416D';
+
+    var lista = document.getElementById('color-w');//
+    lista.style.color = '#DC416D';
+    var lista = document.getElementById('color-B');//
+    lista.style.color = '#DC416D';
+    var lista = document.getElementById('color-b');//
+    lista.style.color = '#DC416D';
+    var lista = document.getElementById('color-p');//
+    lista.style.color = '#DC416D';
+
+    var lista = document.getElementById('color--w');//
+    lista.style.color = '#DC416D';
+    var lista = document.getElementById('color--B');//
+    lista.style.color = '#DC416D';
+    var lista = document.getElementById('color--b');//
+    lista.style.color = '#DC416D';
+    var lista = document.getElementById('color--p');//
+    lista.style.color = '#DC416D';
+
+    
+    var start = document.querySelector('#stt');
+    start.style.border='3px solid #DC416D';
+    start.style.color='#DC416D';
+    start.style.boxShadow=' 0px 0px 9px #DC416D';
+}
+function color3(){
+     app.style.border= '3px solid #2E3669';
+    app.style.color= '#2E3669';
+
+    var bAdd =document.querySelector("#bAdd");//
+    bAdd.style.border='3px solid #2E3669';
+    bAdd.style.color='#2E3669';
+
+    var itTask = document.querySelector("#itTask");//
+    itTask.style.border=' 3px solid #2E3669';
+    itTask.style.color='#2E3669';
+
+    var taskName = document.querySelector('#taskName'); //
+    taskName.style.border='3px solid #2E3669'; 
+    taskName.style.color='#2E3669';
+
+    var contenedorDeTareas = document.querySelector("#tasks");
+    contenedorDeTareas.style.border='3px solid #2E3669'; // 
+    contenedorDeTareas.style.color='#2E3669'; 
+
+    var valorN = document.querySelector('#value');//
+    valorN.style.color='#2E3669';
+    valorN.style.border=' 3px solid #2E3669';
+
+    var botons = document.getElementById('minu1');//
+    botons.style.border='3px solid #2E3669';
+    botons.style.color='#2E3669';
+
+    var boton = document.getElementById('minu2');//
+    boton.style.border  ='3px solid #2E3669';
+    boton.style.color ='#2E3669';
+
+    var lista = document.getElementById('color-w');//
+    lista.style.color = '#2E3669';
+    var lista = document.getElementById('color-B');//
+    lista.style.color = '#2E3669';
+    var lista = document.getElementById('color-b');//
+    lista.style.color = '#2E3669';
+    var lista = document.getElementById('color-p');//
+    lista.style.color = '#2E3669';
+
+    var lista = document.getElementById('color--w');//
+    lista.style.color = '#2E3669';
+    var lista = document.getElementById('color--B');//
+    lista.style.color = '#2E3669';
+    var lista = document.getElementById('color--b');//
+    lista.style.color = '#2E3669';
+    var lista = document.getElementById('color--p');//
+    lista.style.color = '#2E3669';
+
+    
+    var start = document.querySelector('#stt');
+    start.style.border='3px solid #2E3669';
+    start.style.color='#2E3669';
+    start.style.boxShadow=' 0px 0px 9px #2E3669';
+
+
+}
+function color4(){
+        app.style.border= '3px solid #43E5E9';
+        app.style.color= '#43E5E9';
+        
+        var bAdd =document.querySelector("#bAdd");//
+        bAdd.style.border='3px solid #43E5E9';
+        bAdd.style.color='#43E5E9';
+    
+        var itTask = document.querySelector("#itTask");//
+        itTask.style.border=' 3px solid #43E5E9';
+        itTask.style.color='#43E5E9';
+    
+        var taskName = document.querySelector('#taskName'); //
+        taskName.style.border='3px solid  #43E5E9'; 
+        taskName.style.color=' #43E5E9';
+    
+        var contenedorDeTareas = document.querySelector("#tasks");
+        contenedorDeTareas.style.border='3px solid #43E5E9'; // 
+        contenedorDeTareas.style.color='#43E5E9'; 
+    
+        var valorN = document.querySelector('#value');//
+        valorN.style.color='#43E5E9';
+        valorN.style.border=' 3px solid #43E5E9';
+    
+        var botons = document.getElementById('minu1');//
+        botons.style.border='3px solid #43E5E9';
+        botons.style.color='#43E5E9';
+    
+        var boton = document.getElementById('minu2');//
+        boton.style.border  ='3px solid #43E5E9';
+        boton.style.color ='#43E5E9';
+    
+        var lista = document.getElementById('color-w');//
+        lista.style.color = '#43E5E9';
+        var lista = document.getElementById('color-B');//
+        lista.style.color = '#43E5E9';
+        var lista = document.getElementById('color-b');//
+        lista.style.color = '#43E5E9';
+        var lista = document.getElementById('color-p');//
+        lista.style.color = '#43E5E9';
+    
+        var lista = document.getElementById('color--w');//
+        lista.style.color = '#43E5E9';
+        var lista = document.getElementById('color--B');//
+        lista.style.color = '#43E5E9';
+        var lista = document.getElementById('color--b');//
+        lista.style.color = '#43E5E9';
+        var lista = document.getElementById('color--p');//
+        lista.style.color = '#43E5E9';
+    
+        var start = document.querySelector('#stt');
+        start.style.border='3px solid #43E5E9';
+        start.style.color='#43E5E9';
+        start.style.boxShadow=' 0px 0px 9px #43E5E9';
+}

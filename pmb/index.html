@@ -8,11 +8,11 @@
     </head> 
     <body>
 <div id="containerColors"  class="conC"> 
-    <a href="#" class="minu">Bk.colors</a>
+    <a href="#" id="minu1" class="minu">Bk.colors</a>
     <div class="menu">
-        <ul>
-            <li  onclick="blanco()"   id="color--w" class="m_color-- white">White</li>
-            <li  onclick="negro()"  id="color--B" class="m_color-- black">Black</li>    
+        <ul class="ul2"> 
+            <li   onclick="blanco()"   id="color--w" class="m_color-- white">White</li>
+            <li  onclick="negro()"   id="color--B" class="m_color-- black">Black</li>    
             <li  onclick="azul()"  id="color--b"  class="m_color-- blue">Blue</li>  
             <li  onclick="rosa()"  id="color--p"  class="m_color-- pink">Pink</li>
         </ul>
@@ -20,18 +20,20 @@
 </div>
 <!---->
 <div id="containerColors2" class="conC2">
-    <a href="#" class="minu2">B.colors</a>
+    <a href="#" id="minu2" class="minu2">B.colors</a>
     <div class="menu2">
         <ul class="ul2">
-            <li class="li2 white"><a href="#" id="color-w"  type="button"></a></li>
-            <li class="li2 verde"><a href="#" id="color-v"  type="button">Verde</a></li>    
-            <li class="li2 blue"><a href="#" id="color-b"   type="button">Blue</a></li>  
-            <li class="li2 pink"><a href="#" id="color-p"   type="button">Pink</a></li>
+            <li  onclick="color1()" class="li2 white"  id="color-w">B-1</li>
+            <li  onclick="color2()" class="li2 black"  id="color-B">B-2</li>    
+            <li  onclick="color3()" class="li2 blue"   id="color-b">B-3</li>  
+            <li  onclick="color4()" class="li2 pink"   id="color-p">B-4</li>
         </ul>
     </div>
     
 </div>    
-<!---->
+<!--
+    onclick="blancob()"
+-->
 
 <div id="app" >
            <!--<audio id="audi"  src="/proyectos/pomodoro/sonido.mp3"></audio>-->
@@ -44,7 +46,7 @@
         <div class="form">
             <form action="" id="form">
                 <input type="text" id="itTask"/>
-                <input type="submit" id="bAdd" value="Agregar Tarea"/>
+                <input type="submit" id="bAdd" value="Add"/>
             </form>
         </div>
             <div id="tasks"></div>

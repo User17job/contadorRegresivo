@@ -142,7 +142,10 @@ a{
 .tasks-container{
     background-color: rgba(182, 72, 72, 0);
     width: 25%;
-    height: 50px;
+     
+}
+#taskName{
+    border: 3px solid  rgb(255, 255, 255);
 }
 #itTask{
     width: 32%;
@@ -152,7 +155,7 @@ a{
     top: 478.5px;
     left: 34%;
     font-size: 20px;
-    color: white;
+    color: rgb(255, 255, 255);
     border: 3px solid white;
     padding: 5px;
 }
@@ -185,13 +188,14 @@ a{
 .start-button{
     width: 75px;
     height: 45px;
-    background-image: radial-gradient( blue 10%, rgb(0, 238, 255));
+    font-weight: 600;
+    background-color: transparent;
     position: absolute;
-    color: rgb(218, 160, 160);
+    color:white; 
     font-size: 15px;
-    left: 107%;
+    left: 110%;
     top: 68px;
-    border: 3px solid  rgb(24, 149, 195);
+    border: 3px solid rgb(255, 255, 255);
 }
 .done{
     position: absolute;
@@ -200,9 +204,9 @@ a{
     width: 30%;
     padding: 5px;
     height: 25px;
-    color: rgb(192, 191, 255);
-    border: 3px solid rgb(136, 104, 104);
-    background-image: radial-gradient( rgb(9, 82, 94) 10%, rgb(84, 244, 255));
+    color:white  ;
+    border: 3px solid  white;  
+    background-color:transparent ;
 }
 #taskName{
     position: absolute;
@@ -220,8 +224,8 @@ a{
     background-color: white;
     color: black;
 }
-.verde:active{
-    background-color: green;
+.black:active{
+    background-color: rgb(0, 0, 0);
     color: white;
 }
 .blue:active{
@@ -232,7 +236,6 @@ a{
     background-color: pink;
     color: black;
 }
-
 
 
 
@@ -274,15 +277,22 @@ a{
         text-wrap: wrap;
     }
     .done{
-        height: 38px;
-        left: 184%;
-        top: 168px;
+        position: asoloute;
+        text-decoration: none;
+        height: 25px;
+        left: 208%;
+        top: 195px;
+        font-weight: 600;
     }
     #taskName{
-        top: 271px;
-        left: 30%;
+        top: 27px;
+        left: 40%;
         text-decoration: underline;
         font-size: 25px;
+        width: 200px;
+        height: 150px;
+        position: relative;
+        
     }
 }
  
