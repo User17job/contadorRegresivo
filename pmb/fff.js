@@ -87,7 +87,7 @@ function playi2() {
 }
 // tercera funcion para empezar a contar 
 function startButtonHandler(id) {
-    time = 25 * 60;
+    time = 5 * 1;
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
     taskName.textContent = tasks[taskIndex].title;
@@ -417,11 +417,11 @@ function color1(){
     valorN.style.border=' 3px solid white';
 
     var botons = document.getElementById('minu1');//
-    botons.style.border='3px solid white';
+    botons.style.border='3px solid black';
     botons.style.color='white';
 
     var boton = document.getElementById('minu2');//
-    boton.style.border  ='3px solid white';
+    boton.style.border  ='3px solid black';
     boton.style.color ='white';
 
     var lista = document.getElementById('color-w');//
