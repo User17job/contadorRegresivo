@@ -87,7 +87,7 @@ function playi2() {
 }
 // tercera funcion para empezar a contar 
 function startButtonHandler(id) {
-    time = 30 * 1;
+    time = 25 * 60;
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
     taskName.textContent = tasks[taskIndex].title;
@@ -110,7 +110,7 @@ function timerHandler(id) {
 }
 // quinta MUESTRA tiempo de descanso 
 function startBreak() {
-    time = 10 * 60;
+    time = 5 * 60;
     taskName.textContent = 'Break';
     timerBreak = setInterval(() => {
         timerBreakHandler();

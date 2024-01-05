@@ -271,7 +271,7 @@ a{
     .start-button{
         left: 103%;
         top: 178px;
-        width: 58%;
+        width: 63%;
         font-size: 15px;
         overflow: hidden;
         text-wrap: wrap;
@@ -286,10 +286,10 @@ a{
     }
     #taskName{
         top: 27px;
-        left: 40%;
+        left: 41%;
         text-decoration: underline;
         font-size: 25px;
-        width: 200px;
+        width: 180px;
         height: 150px;
         position: relative;
         
