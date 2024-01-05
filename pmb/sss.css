@@ -269,10 +269,12 @@ a{
         text-wrap: wrap;
     }
     .start-button{
+        padding: 5px;
+        padding-top: 1px;
         left: 103%;
         top: 178px;
         width: 63%;
-        font-size: 15px;
+        font-size: 13px;
         overflow: hidden;
         text-wrap: wrap;
     }
