@@ -87,7 +87,7 @@ function playi2() {
 }
 // tercera funcion para empezar a contar 
 function startButtonHandler(id) {
-    time = 5 * 1;
+    time = 25 * 60;
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
     taskName.textContent = tasks[taskIndex].title;
