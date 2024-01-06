@@ -159,7 +159,6 @@ a{
     border: 3px solid white;
     padding: 5px;
 }
- 
 #bAdd{
    width:  15%;
    height: 52.5px;
@@ -255,6 +254,36 @@ a{
 
 
 @media screen and (min-width: 1700px){
+        .minu{
+        background-color: transparent;
+        font-weight: 600;
+        border: 3px solid  white;
+        width: 90px;            
+        margin: 5px;
+        height: 15px;
+        position: absolute;
+        text-align: center;
+        padding: 10px;
+        padding-top: 5px;
+        border-radius: 3px;
+        color: white;
+}
+.minu2{
+    background-color: transparent;
+    font-weight: 600;
+    border: 3px solid white;
+    width: 90px;
+    margin: 10px;
+    height: 15px;
+    position: absolute;
+    text-align: center;
+    left: 0px;
+    padding: 10px;
+    top: 0px;
+    border-radius: 3px;
+    padding-top: 5px;
+    color: white;
+}
     body{
         overflow-y: hidden;
     }
