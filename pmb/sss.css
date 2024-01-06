@@ -375,37 +375,40 @@ a{
 
     } 
     #itTask{
-       height: 55px;
+       height: 60px;
        width: 45%; 
-       top: 525px;
+       top: 590px;
        left: 13%;
+       font-size:30px ;
     }
     #bAdd{
-     top: 530px;
+     top: 590px;
      left: 65.5%;  
      width: 22%;
-     font-size: 20px;
+     font-size: 30px;
      font-weight: 700;
      text-wrap: wrap; 
-     height: 65px;
+     height: 70px;
     }
     #tasks{
         width: 25%;
-        top: 312px;
-        height:185px;
+        top: 330px;
+        height:215px;
         left: 13%;
         text-wrap: wrap;
+        font-size: 20px;
     }
     .start-button{
         padding: 5px;
         padding-top: 1px;
         left: 110%;
-        top: 156px;
+        top: 190px;
         width: 63%;
         height: 50px;
         font-size: 20px;
         overflow: hidden;
         text-wrap: wrap;
+        font-size: 25px;
     }
     .done{
         position: asoloute;
@@ -487,6 +490,3 @@ a{
     }
 }
  
-/* bordes: done,start-button,tasks,bAdd,itTask,value, app, mColors,
-/text: start-button,
-text-shadow: bAdd and start-button 
