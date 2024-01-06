@@ -300,11 +300,12 @@ a{
     padding-top:5px;
 
     } 
-    #itTask{
+    #itTask{/**/
        height: 55px;
        width: 45%; 
        top: 530px;
-       left: 12.5%;
+       left: 15%;
+       font-size: 30px;
     }
     #bAdd{
      top: 530px;
@@ -315,7 +316,7 @@ a{
      text-wrap: wrap; 
      height: 65px;
     }
-    #tasks{
+    #tasks{/**/
         width: 25%;
         top: 312px;
         height:185px;
