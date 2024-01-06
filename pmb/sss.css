@@ -204,6 +204,7 @@ a{
     padding: 5px;
     height: 25px;
     color:white  ; 
+    font-size: 30px;
     background-color:transparent ;
 }
 #taskName{
@@ -361,7 +362,7 @@ a{
         overflow-y: hidden;
     }
     #app{
-        height: 450px;
+        height: 550px;
         width: 75%;
         
     } 
@@ -376,8 +377,8 @@ a{
     #itTask{
        height: 55px;
        width: 45%; 
-       top: 530px;
-       left: 12.5%;
+       top: 525px;
+       left: 13%;
     }
     #bAdd{
      top: 530px;
@@ -392,7 +393,7 @@ a{
         width: 25%;
         top: 312px;
         height:185px;
-        left: 12.5%;
+        left: 13%;
         text-wrap: wrap;
     }
     .start-button{
