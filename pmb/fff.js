@@ -271,61 +271,61 @@ function negro(){
 function azul(){
     var Body = document.querySelector('body');//
     Body.style.background='blue';
-    Body.style.color='green';
+    Body.style.color='#3FE529';
 
     var app =  document.querySelector('#app');//
-    app.style.border= '3px solid green';
-    app.style.color= 'green';
+    app.style.border= '3px solid #3FE529';
+    app.style.color= '#3FE529';
 
     var bAdd =document.querySelector("#bAdd");//
-    bAdd.style.border='3px solid green';
-    bAdd.style.color='green';
+    bAdd.style.border='3px solid #3FE529';
+    bAdd.style.color='#3FE529';
 
     var itTask = document.querySelector("#itTask");//
-    itTask.style.border=' 3px solid green';
-    itTask.style.color='green';
+    itTask.style.border=' 3px solid #3FE529';
+    itTask.style.color='#3FE529';
 
     var taskName = document.querySelector('#taskName'); //
-    taskName.style.border='3px solid green'; 
-    taskName.style.color='green';
+    taskName.style.border='3px solid #3FE529'; 
+    taskName.style.color='#3FE529';
 
     var contenedorDeTareas = document.querySelector("#tasks");
-    contenedorDeTareas.style.border='3px solid green'; // 
-    contenedorDeTareas.style.color='green'; 
+    contenedorDeTareas.style.border='3px solid #3FE529'; // 
+    contenedorDeTareas.style.color='#3FE529'; 
 
     var valorN = document.querySelector('#value');//
-    valorN.style.color='green';
-    valorN.style.border=' 3px solid green';
+    valorN.style.color='#3FE529';
+    valorN.style.border=' 3px solid #3FE529';
 
     var botons = document.getElementById('minu1');//
-    botons.style.border='3px solid green';
-    botons.style.color='green';
+    botons.style.border='3px solid#3FE529';
+    botons.style.color='#3FE529';
 
     var boton = document.getElementById('minu2');//
-    boton.style.border  ='3px solid green';
-    boton.style.color ='green';
+    boton.style.border  ='3px solid #3FE529';
+    boton.style.color ='#3FE529';
 
     var lista = document.getElementById('color-w');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     var lista = document.getElementById('color-B');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     var lista = document.getElementById('color-b');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     var lista = document.getElementById('color-p');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
 
     var lista = document.getElementById('color--w');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     var lista = document.getElementById('color--B');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     var lista = document.getElementById('color--b');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     var lista = document.getElementById('color--p');//
-    lista.style.color = 'green';
+    lista.style.color = '#3FE529';
     
     var start = document.querySelector('#stt');
-    start.style.border='3px solid green';
-    start.style.color='green';
+    start.style.border='3px solid #3FE529';
+    start.style.color='#3FE529';
     start.style.boxShadow='none';
 }
 function rosa(){
@@ -354,8 +354,8 @@ function rosa(){
     contenedorDeTareas.style.color='bisque'; 
 
     var valorN = document.querySelector('#value');//
-    valorN.style.color='bisque';
     valorN.style.border=' 3px solid bisque';
+    valorN.style.color='bisque';
 
     var botons = document.getElementById('minu1');//
     botons.style.border='3px solid bisque';
@@ -385,8 +385,8 @@ function rosa(){
     
     var start = document.querySelector('#stt');
     start.style.border='3px solid bisque';
-    start.style.color='bisque';
     start.style.boxShadow='none';    
+    start.style.color='bisque';
 }
 
 
