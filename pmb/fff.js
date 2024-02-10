@@ -1,4 +1,6 @@
-
+const input = document.getElementById("addT-input");
+const Abtn = document.getElementById("addT-btn");
+const Aform = document.querySelector(".addT");
 // constantes para el cambio del  color del 
 // background, bordes y letras.
 const whiteBk = document.getElementById('color--w');
@@ -13,7 +15,13 @@ const greenB = document.getElementById('color-v');
 const blueB = document.getElementById('color-b');
 const pinkB = document.getElementById('color-p');
 
-
+let btnTime;
+Abtn.addEventListener("click", function(){
+    let btnTime= input.value;
+    console.log(btnTime);
+    const valuE = localStorage.setItem("valiu1", btnTime);
+    Aform.reset();
+});
 
 const tasks = [];  
 let time = 0;
@@ -45,9 +53,7 @@ function createTask(value) {
         title: value,
         completed: false,
     };
-
     tasks.unshift(newTask);
-
 }
 
 //segunda función; para generar elementos para html las cuales van a mostrar la tarea y avisar si ya terminaste la tarea 
@@ -87,7 +93,13 @@ function playi2() {
 }
 // tercera funcion para empezar a contar 
 function startButtonHandler(id) {
-    time = 25 * 60;
+    let tiempo = localStorage.getItem("valiu1");
+    if(tiempo == 0){
+        time = 5;
+    }else{
+        time = tiempo * 60;
+    }
+    // sino mefunciona al desplegarlo le pongo un promt
     current = id;
     const taskIndex = tasks.findIndex(task => task.id === id);
     taskName.textContent = tasks[taskIndex].title;
@@ -389,9 +401,6 @@ function rosa(){
     start.style.color='bisque';
 }
 
-
-
-
 function color1(){
      app.style.border= '3px solid white';
     app.style.color= 'white';
@@ -617,3 +626,12 @@ function color4(){
         start.style.color='#43E5E9';
         start.style.boxShadow=' 0px 0px 9px #43E5E9';
 }
+
+ 
+input.addEventListener("keypress", (event) => {
+  if (event.charCode < 48 || event.charCode > 57) {
+    event.preventDefault();
+  } 
+});
+console.log(input.value)
+
