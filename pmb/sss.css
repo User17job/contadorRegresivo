@@ -3,6 +3,7 @@ body{
     color: rgb(255, 255, 255);
     margin: 0px;
     border: 0px;
+    overflow: hidden;
 
 }
 /* estilos para los menus de los colores*/ 
@@ -342,7 +343,7 @@ a{
         overflow-y: hidden;
     }
     #app{         
-        background-color: #43E5E9;
+        background-color: #43e6e900;
         height: 650px;
         width: 90%;
     } 
@@ -425,7 +426,7 @@ a{
         text-decoration: none;
     }
 }
-@media screen and (min-width: 1000px){
+@media screen and (min-width: 1260px){
     body{
         overflow-y: hidden;
     }
@@ -595,5 +596,11 @@ a{
         position: relative;
         
     }
+}
+@media screen and  (min-height: 650px){
+    #app{
+        height: 80vh;
+    }
+    
 }
  
