@@ -515,6 +515,10 @@ a{
     }
 }
 @media screen and (max-width: 600px){
+
+    body{
+        overflow-x: hidden;
+    }
     #app{
         height: 470px;
         width: 68%;
@@ -533,7 +537,7 @@ a{
     #addT-input{
         width: 40px;
         top: 80px;
-        left:-393px;
+        left:-435px;
         height: 20px;
         padding: 6px;
         font-size: 25px;
@@ -541,7 +545,7 @@ a{
     #addT-btn{
         top: 60px;
         height: 44px;
-        left: -505px;
+        left: -550px;
         width: 50px;
         text-align: center;
         font-size: 15px;

@@ -16,7 +16,8 @@ const blueB = document.getElementById('color-b');
 const pinkB = document.getElementById('color-p');
 
 let btnTime;
-Abtn.addEventListener("click", function(){
+Abtn.addEventListener("click", function(e){
+ e.preventDefault();
     let btnTime= input.value;
     console.log(btnTime);
     const valuE = localStorage.setItem("valiu1", btnTime);
